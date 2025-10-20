@@ -28,8 +28,8 @@ class SplashScreenActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                startActivity(Intent(this@SplashScreenActivity, MainActivityCliente::class.java))
-                finish()
+                startActivity(Intent(this@SplashScreenActivity, MainActivityVendedor::class.java))
+                finishAffinity()
             }
         }.start()
     }
