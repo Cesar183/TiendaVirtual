@@ -23,6 +23,14 @@
     <string name="op_tienda_c">Tienda</string>
     <string name="op_mis_ordenes_c">Mis órdenes</string>
 
+    <!--Registro de vendedor-->
+    <string name="txtRegistroV">Registro de vendedor</string>
+    <string name="etNombresV">Nombres completos</string>
+    <string name="etEmailV">Email</string>
+    <string name="etPasswordV">Password</string>
+    <string name="etCPassword">Confirmar password</string>
+    <string name="btnRegistrarV">Registrarme</string>
+
     <string name="txt_bienvenida">Bienvenido(a)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
