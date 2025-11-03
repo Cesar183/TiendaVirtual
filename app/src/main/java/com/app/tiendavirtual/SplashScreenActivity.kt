@@ -40,7 +40,7 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun comprobarTipoUsuario(){
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser == null) {
-            startActivity(Intent(this, MainActivityVendedor::class.java))
+            startActivity(Intent(this, SeleccionarTipoActivity::class.java))
             Toast.makeText(applicationContext, "No se encuentra registrado", Toast.LENGTH_SHORT).show()
         } else {
             val reference = FirebaseDatabase.getInstance().getReference("Usuarios")

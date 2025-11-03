@@ -4,6 +4,9 @@
     <string name="open_drawer">Tienda Virtual</string>
     <string name="close_drawner">Tienda Virtual</string>
 
+    <string name="tipoVendedor">Vendedor</string>
+    <string name="tipoCliente">Cliente</string>
+
     <!--NavigationDrawer Vendedor-->
     <string name="op_inicio_v">Inicio</string>
     <string name="op_mi_tienda_v">Mi tienda</string>

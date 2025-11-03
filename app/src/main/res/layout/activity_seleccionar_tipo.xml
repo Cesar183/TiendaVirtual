@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SeleccionarTipoActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/vendedor"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tipoVendedor"
+            android:text="@string/tipoVendedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="8dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"/>
+
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cliente"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tipoCliente"
+            android:text="@string/tipoCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cornerRadius="8dp"
+            android:textAllCaps="true"
+            android:layout_marginTop="10dp"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</RelativeLayout>
