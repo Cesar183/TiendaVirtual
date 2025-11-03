@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.app.tiendavirtual.cliente.MainActivityCliente
 import com.app.tiendavirtual.vendedor.MainActivityVendedor
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -28,8 +32,7 @@ class SplashScreenActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                startActivity(Intent(this@SplashScreenActivity, MainActivityVendedor::class.java))
-                finishAffinity()
+                comprobarTipoUsuario()
             }
         }.start()
     }
@@ -37,9 +40,27 @@ class SplashScreenActivity : AppCompatActivity() {
     private fun comprobarTipoUsuario(){
         val firebaseUser = firebaseAuth.currentUser
         if (firebaseUser == null) {
-            //startActivity(Intent(this, RegistroClienteActivity::class.java))
+            startActivity(Intent(this, MainActivityVendedor::class.java))
             Toast.makeText(applicationContext, "No se encuentra registrado", Toast.LENGTH_SHORT).show()
         } else {
+            val reference = FirebaseDatabase.getInstance().getReference("Usuarios")
+            reference.child(firebaseUser.uid)
+                .addListenerForSingleValueEvent(object : ValueEventListener{
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        val tipoU = snapshot.child("tipoUsuario").value
+                        if (tipoU == "vendedor"){
+                            startActivity(Intent(this@SplashScreenActivity, MainActivityVendedor::class.java))
+                            finishAffinity()
+                        } else if (tipoU == "cliente"){
+                            startActivity(Intent(this@SplashScreenActivity, MainActivityCliente::class.java))
+                            finishAffinity()
+                        }
+                    }
+
+                    override fun onCancelled(error: DatabaseError) {
+                        TODO("Not yet implemented")
+                    }
+                })
             Toast.makeText(applicationContext, "Ha iniciado sesión", Toast.LENGTH_SHORT).show()
         }
     }
