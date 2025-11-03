@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ico_email"
                 android:drawablePadding="5dp"
-                android:hint="@string/etEmailV"
+                android:hint="@string/etEmail"
                 android:inputType="textEmailAddress" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/ico_password"
                 android:drawablePadding="5dp"
-                android:hint="@string/etPasswordV"
+                android:hint="@string/etPassword"
                 android:inputType="textPassword" />
 
         </com.google.android.material.textfield.TextInputLayout>
