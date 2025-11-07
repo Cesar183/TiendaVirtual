@@ -13,6 +13,7 @@ lottieV="6.6.10"
 googleServiceV="4.4.4"
 firebaseAuthV="24.0.1"
 firebaseDataBaseV="22.0.1"
+imagePickerV="2.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -26,6 +27,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 lottie = {group = "com.airbnb.android", name = "lottie", version.ref = "lottieV"}
 firebase-auth = {group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuthV"}
 firebaseDatabase = {group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDataBaseV"}
+imagePicker={group = "com.github.dhaval2404", name = "imagepicker", version.ref = "imagePickerV"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
