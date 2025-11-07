@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vendedor.productos.AgregarProductoActivity">
+
+    <!--Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/txtAgregarProducto"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ccc" />
+
+    </RelativeLayout>
+
+    <!--Icono agregar producto-->
+    <RelativeLayout
+        android:id="@+id/RLImagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarRL">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgAgregarProducto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/agregar_producto" />
+
+    </RelativeLayout>
+
+    <!--Información de un producto-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RLImagen"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Listar las imagenes del producto-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RV_ImagenesProducto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4"
+                tools:listitem="@layout/item_imagenes_seleccionadas" />
+
+            <!--Nombre del producto-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_NombresP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RV_ImagenesProducto">
+
+                <EditText
+                    android:id="@+id/etNombresP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etNombresP"
+                    android:inputType="textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Descripcion-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_DescripcionP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TIL_NombresP">
+
+                <EditText
+                    android:id="@+id/etDescripcionP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etDescripcionP"
+                    android:inputType="textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Precio-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_Precio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TIL_DescripcionP">
+
+                <EditText
+                    android:id="@+id/etPrecioP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etPrecioP"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Switch-->
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/descuentoSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/TIL_Precio"
+                android:layout_margin="5dp"
+                android:text="@string/txtDescuento" />
+            <!--Precio con descuento-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_PrecioDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descuentoSwitch">
+
+                <EditText
+                    android:id="@+id/etPrecionConDescuentoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etPrecionConDescuentoP"
+                    android:inputType="numberDecimal" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Nota del descuento-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TIL_NotaDes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TIL_PrecioDes">
+
+                <EditText
+                    android:id="@+id/etNotaDescuentoP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/etNotaDescuentoP"
+                    android:inputType="textCapSentences" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--Boton Agregar Producto-->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAgregarProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:text="@string/btnAgregarProducto"
+        android:textAllCaps="true"
+        app:cornerRadius="8dp" />
+
+</RelativeLayout>
