@@ -17,6 +17,7 @@ imagePickerV="2.1"
 glideV="5.0.5"
 lifecycleV = "2.9.4"
 playServicesLocationV = "21.3.0"
+storageV = "22.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -34,6 +35,7 @@ imagePicker={group = "com.github.dhaval2404", name = "imagepicker", version.ref 
 glide = {group = "com.github.bumptech.glide", name = "glide", version.ref = "glideV"}
 lifecycle = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleV"}
 playServicesLocation = {group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocationV"}
+storage = {group = "com.google.firebase", name = "firebase-storage", version.ref = "storageV"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
