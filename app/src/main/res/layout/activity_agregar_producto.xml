@@ -95,12 +95,28 @@
                     android:inputType="textCapSentences" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Categrias-->
+            <TextView
+                android:id="@+id/categoria"
+                android:text="@string/categoria"
+                android:layout_below="@+id/TIL_DescripcionP"
+                android:layout_marginTop="5dp"
+                android:padding="15dp"
+                android:textSize="17sp"
+                android:background="@drawable/custom_edittext"
+                app:drawableEndCompat="@drawable/ic_abajo"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
             <!--Precio-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/TIL_Precio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/TIL_DescripcionP">
+                android:layout_below="@+id/categoria">
 
                 <EditText
                     android:id="@+id/etPrecioP"
@@ -110,6 +126,7 @@
                     android:inputType="numberDecimal" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <!--Switch-->
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/descuentoSwitch"
@@ -118,6 +135,7 @@
                 android:layout_below="@+id/TIL_Precio"
                 android:layout_margin="5dp"
                 android:text="@string/txtDescuento" />
+
             <!--Precio con descuento-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/TIL_PrecioDes"
@@ -133,6 +151,7 @@
                     android:inputType="numberDecimal" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
             <!--Nota del descuento-->
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/TIL_NotaDes"
