@@ -11,6 +11,7 @@
     <string name="op_inicio_v">Inicio</string>
     <string name="op_mi_tienda_v">Mi tienda</string>
     <string name="op_resenia_v">Reseñas</string>
+    <string name="op_geo_v">Geolocalización</string>
     <string name="op_cerrar_sesion_v">Cerrar sesión</string>
 
     <!--NavigationDrawer Cliente-->
@@ -61,6 +62,9 @@
     <string name="etNotaDescuentoP">Ejm: 10% Desc.</string>
     <string name="btnAgregarProducto">Agregar producto</string>
 
+    <!--Geolocalizacion-->
+    <string name="btnLocation">Obtener Localización</string>
+    <string name="txtLocalizacion">Geolocalización</string>
 
     <string name="txt_bienvenida">Bienvenido(a)</string>
     <!-- TODO: Remove or change this placeholder text -->

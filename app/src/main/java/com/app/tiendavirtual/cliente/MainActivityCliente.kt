@@ -16,6 +16,7 @@ import com.app.tiendavirtual.cliente.bottom_nav_fragments_cliente.FragmentTienda
 import com.app.tiendavirtual.cliente.nav_fragments_cliente.FragmentInicioC
 import com.app.tiendavirtual.cliente.nav_fragments_cliente.FragmentMiPerfilC
 import com.app.tiendavirtual.databinding.ActivityMainClienteBinding
+import com.app.tiendavirtual.localizacion.FragmentLocation
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 
@@ -87,6 +88,9 @@ class MainActivityCliente : AppCompatActivity(), NavigationView.OnNavigationItem
             }
             R.id.op_mis_ordenes_c->{
                 replaceFragment(FragmentMisOrdenesC())
+            }
+            R.id.op_geo_v->{
+                replaceFragment(FragmentLocation())
             }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)

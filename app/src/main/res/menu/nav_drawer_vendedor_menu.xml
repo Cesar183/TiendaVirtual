@@ -22,6 +22,11 @@
             android:title="@string/op_resenia_v"
             android:icon="@drawable/ico_resenias"/>
 
+        <item
+            android:id="@+id/op_geo_v"
+            android:title="@string/op_geo_v"
+            android:icon="@drawable/ico_location"/>
+
     </group>
 
     <item

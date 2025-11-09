@@ -15,6 +15,8 @@ firebaseAuthV="24.0.1"
 firebaseDataBaseV="22.0.1"
 imagePickerV="2.1"
 glideV="5.0.5"
+lifecycleV = "2.9.4"
+playServicesLocationV = "21.3.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,6 +32,8 @@ firebase-auth = {group = "com.google.firebase", name = "firebase-auth", version.
 firebaseDatabase = {group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDataBaseV"}
 imagePicker={group = "com.github.dhaval2404", name = "imagepicker", version.ref = "imagePickerV"}
 glide = {group = "com.github.bumptech.glide", name = "glide", version.ref = "glideV"}
+lifecycle = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleV"}
+playServicesLocation = {group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocationV"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

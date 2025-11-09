@@ -13,6 +13,7 @@ import com.app.tiendavirtual.R
 import com.app.tiendavirtual.SeleccionarTipoActivity
 import com.app.tiendavirtual.cliente.bottom_nav_fragments_cliente.FragmentMisOrdenesC
 import com.app.tiendavirtual.databinding.ActivityMainVendedorBinding
+import com.app.tiendavirtual.localizacion.FragmentLocation
 import com.app.tiendavirtual.vendedor.bottom_nav_fragments_vendedor.FragmentMisProductosV
 import com.app.tiendavirtual.vendedor.bottom_nav_fragments_vendedor.FragmentOrdenesV
 import com.app.tiendavirtual.vendedor.nav_fragments_vendedor.FragmentInicioV
@@ -94,6 +95,9 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
             }
             R.id.op_mis_ordenes_v->{
                 replaceFragment(FragmentOrdenesV())
+            }
+            R.id.op_geo_v->{
+                replaceFragment(FragmentLocation())
             }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)

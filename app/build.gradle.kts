@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.firebaseDatabase)
     implementation(libs.imagePicker) /*Recortar una imagen */
     implementation(libs.glide) /*Leer imagenes*/
+    implementation(libs.lifecycle) /*corrutinas*/
+    implementation(libs.playServicesLocation) /*localizacion*/
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
