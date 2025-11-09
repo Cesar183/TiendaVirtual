@@ -16,6 +16,7 @@ import com.app.tiendavirtual.databinding.ActivityMainVendedorBinding
 import com.app.tiendavirtual.localizacion.FragmentLocation
 import com.app.tiendavirtual.vendedor.bottom_nav_fragments_vendedor.FragmentMisProductosV
 import com.app.tiendavirtual.vendedor.bottom_nav_fragments_vendedor.FragmentOrdenesV
+import com.app.tiendavirtual.vendedor.nav_fragments_vendedor.FragmentCategoriasV
 import com.app.tiendavirtual.vendedor.nav_fragments_vendedor.FragmentInicioV
 import com.app.tiendavirtual.vendedor.nav_fragments_vendedor.FragmentMiTiendaV
 import com.app.tiendavirtual.vendedor.nav_fragments_vendedor.FragmentReseniasV
@@ -83,6 +84,9 @@ class MainActivityVendedor : AppCompatActivity(), NavigationView.OnNavigationIte
             }
             R.id.op_mi_tienda_v->{
                 replaceFragment(FragmentMiTiendaV())
+            }
+            R.id.op_categorias_v->{
+                replaceFragment(FragmentCategoriasV())
             }
             R.id.op_resenia_v->{
                 replaceFragment(FragmentReseniasV())
