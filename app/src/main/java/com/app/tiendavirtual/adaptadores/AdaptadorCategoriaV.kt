@@ -5,9 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.app.tiendavirtual.databinding.ItemCategoriaVBinding
 import com.app.tiendavirtual.modelos.ModeloCategoria
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.storage.FirebaseStorage
 
 class AdaptadorCategoriaV: RecyclerView.Adapter<AdaptadorCategoriaV.HolderCategoriaV> {
 
@@ -37,8 +40,44 @@ class AdaptadorCategoriaV: RecyclerView.Adapter<AdaptadorCategoriaV.HolderCatego
 
         holder.item_nombreCat_v.text = categoria
         holder.item_eliminarCat.setOnClickListener {
-            Toast.makeText(mContext, "Eliminar categoria", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(mContext, "Eliminar categoria", Toast.LENGTH_SHORT).show()
+            val builder = AlertDialog.Builder(mContext)
+            builder.setTitle("Eliminar categoría")
+            builder.setMessage("¿Quieres eliminar esta categoría?")
+                .setPositiveButton("Confirmar"){a,d ->
+                    eliminarCategoria(modelo, holder)
+                }
+                .setNegativeButton("Cancelar"){a,d ->
+                    a.dismiss()
+                }
+            builder.show()
         }
+    }
+
+    private fun eliminarCategoria(modelo: ModeloCategoria, holder: AdaptadorCategoriaV.HolderCategoriaV) {
+        val idCat = modelo.id
+        val ref = FirebaseDatabase.getInstance().getReference("Categorias")
+        ref.child(idCat).removeValue()
+            .addOnSuccessListener {
+                Toast.makeText(mContext, "Categoría eliminada", Toast.LENGTH_SHORT).show()
+                eliminarImgCat(idCat)
+            }
+            .addOnFailureListener {e ->
+                Toast.makeText(mContext, "No se eliminó la categoria debido a ${e.message}", Toast.LENGTH_LONG).show()
+            }
+    }
+
+    private fun eliminarImgCat(idCat: String) {
+        val nombreImg = idCat
+        val rutaImagen = "Categorias/$nombreImg"
+        val storageRef = FirebaseStorage.getInstance().getReference(rutaImagen)
+        storageRef.delete()
+            .addOnSuccessListener {
+                Toast.makeText(mContext, "Se eliminó la imagen de la categoría", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(mContext, "${e.message}", Toast.LENGTH_LONG).show()
+            }
     }
 
     inner class HolderCategoriaV(itemView : View) : RecyclerView.ViewHolder(itemView){
