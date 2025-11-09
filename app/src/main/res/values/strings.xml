@@ -71,6 +71,9 @@
     <string name="etCategoria">Ingrese categoria</string>
     <string name="btnAgregarCat">Agregar categoría</string>
 
+    <!--Item categoria vendedor-->
+    <string name="item_nombreCat_v">Nombre de categoría</string>
+
     <string name="txt_bienvenida">Bienvenido(a)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -48,6 +48,15 @@
             android:textAllCaps="true"
             app:cornerRadius="8dp" />
 
+        <!--Listar-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategorias"
+            android:layout_margin="5dp"
+            tools:listitem="@layout/item_categoria_v"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>
