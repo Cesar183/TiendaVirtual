@@ -99,7 +99,7 @@
             <!--Categrias-->
             <TextView
                 android:id="@+id/categoria"
-                android:text="@string/categoria"
+                android:hint="@string/categoria"
                 android:layout_below="@+id/TIL_DescripcionP"
                 android:layout_marginTop="5dp"
                 android:padding="15dp"
