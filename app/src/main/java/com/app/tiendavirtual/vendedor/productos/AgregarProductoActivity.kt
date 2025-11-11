@@ -132,6 +132,7 @@ class AgregarProductoActivity : AppCompatActivity() {
         val hashMap = HashMap<String, Any>()
         hashMap["id"] = "${keyId}"
         hashMap["nombre"] = "${nombreP}"
+        hashMap["descripcion"] = "${descripcionP}"
         hashMap["categoria"] = "${categoriaP}"
         hashMap["precio"] = "${precioP}"
         hashMap["precioDesc"] = "${precioDescP}"
