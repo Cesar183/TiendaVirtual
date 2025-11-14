@@ -74,6 +74,10 @@
     <!--Item categoria vendedor-->
     <string name="item_nombreCat_v">Nombre de categoría</string>
 
+    <!--Item categoria vendedor-->
+    <string name="item_nombreCat_c">Nombre de categoría</string>
+    <string name="item_ver_productos">Ver productos</string>
+
     <!--Registro de cliente-->
     <string name="item_nombre_p">Nombre del producto</string>
     <string name="item_nota_p">50% OFF</string>

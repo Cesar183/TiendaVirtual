@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.lifecycle) /*corrutinas*/
     implementation(libs.playServicesLocation) /*localizacion*/
     implementation(libs.storage) /*Subir archivos multimedia*/
+    implementation(libs.authGoogle) /*Iniciar sesion con google*/
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

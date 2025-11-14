@@ -70,6 +70,29 @@
             android:textAllCaps="true"
             app:cornerRadius="8dp" />
 
+        <!--Login con Google
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="100dp"
+                android:layout_height="60dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnLoginGoogle"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_google_login"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
