@@ -1,11 +1,14 @@
 package com.app.tiendavirtual.adaptadores
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.app.tiendavirtual.R
+import com.app.tiendavirtual.cliente.productosC.ProductosCatCActivity
 import com.app.tiendavirtual.databinding.ItemCategoriaCBinding
 import com.app.tiendavirtual.modelos.ModeloCategoria
 import com.bumptech.glide.Glide
@@ -50,5 +53,13 @@ class AdaptadorCategoriaC : RecyclerView.Adapter<AdaptadorCategoriaC.HolderCateg
             .load(imagen)
             .placeholder(R.drawable.categorias)
             .into(holder.item_img_cat)
+
+        //Evento para ver productos de una categoria
+        holder.item_var_productos.setOnClickListener {
+            val intent = Intent(mContext, ProductosCatCActivity::class.java)
+            intent.putExtra("nombreCat", categoria)
+            Toast.makeText(mContext, "Categoría seleccionada ${categoria}", Toast.LENGTH_SHORT).show()
+            mContext.startActivity(intent)
+        }
     }
 }

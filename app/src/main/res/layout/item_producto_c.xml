@@ -12,39 +12,54 @@
         android:orientation="vertical"
         android:padding="7dp">
 
-        <!--Imagen de la categoria-->
         <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/imagenCateg"
+            android:id="@+id/imagenP"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
             android:layout_marginTop="2dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/categorias" />
+            android:src="@drawable/item_imagen_producto" />
 
-        <!--Nombre categoria-->
+        <!--Nombre del producto-->
         <TextView
-            android:id="@+id/item_nombreCat_c"
+            android:id="@+id/item_nombre_p"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="7dp"
             android:maxLines="1"
-            android:text="@string/item_nombreCat_c"
+            android:text="@string/item_nombre_p"
             android:textSize="17sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/item_ver_productos"
+            android:id="@+id/item_nota_p"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="7dp"
-            android:layout_marginBottom="7dp"
-            android:background="@drawable/fondo_celeste"
-            android:padding="7dp"
-            android:textColor="@color/black"
-            android:text="@string/item_ver_productos" />
+            android:layout_marginTop="5dp"
+            android:background="@drawable/fondo_verde"
+            android:padding="5dp"
+            android:text="@string/item_nota_p"
+            android:visibility="gone" />
+
+        <!--Precio del producto-->
+        <TextView
+            android:id="@+id/item_precio_p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:text="@string/item_precio_p" />
+
+        <!--Precio con descuento-->
+        <TextView
+            android:id="@+id/item_precio_p_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:text="@string/item_precio_p_desc"
+            android:visibility="gone" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
