@@ -74,9 +74,12 @@
     <!--Item categoria vendedor-->
     <string name="item_nombreCat_v">Nombre de categoría</string>
 
-    <!--Item categoria vendedor-->
+    <!--Item categoria cliente-->
     <string name="item_nombreCat_c">Nombre de categoría</string>
     <string name="item_ver_productos">Ver productos</string>
+
+    <!--Item producto cliente-->
+    <string name="item_agregar_carrito_p">Añadir al carrito</string>
 
     <!--Registro de cliente-->
     <string name="item_nombre_p">Nombre del producto</string>

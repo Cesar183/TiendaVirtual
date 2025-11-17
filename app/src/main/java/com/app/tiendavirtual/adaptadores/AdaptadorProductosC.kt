@@ -1,6 +1,7 @@
 package com.app.tiendavirtual.adaptadores
 
 import android.content.Context
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,24 +59,24 @@ class AdaptadorProductosC : RecyclerView.Adapter<AdaptadorProductosC.HolderProdu
         holder.item_nota_p.text = "${notaDesc}"
 
         if (precioDesc.isNotEmpty() && notaDesc.isNotEmpty()) {
-            visualizarDescuento(holder)
+            visualizarDescuento(modeloProducto, holder)
         }
     }
 
-    private fun visualizarDescuento(holder: AdaptadorProductosC.HolderProducto) {
+    private fun visualizarDescuento(modeloProducto: ModeloProducto, holder: AdaptadorProductosC.HolderProducto) {
+        val idProducto = modeloProducto.id
         val ref = FirebaseDatabase.getInstance().getReference("Productos")
-        ref.addValueEventListener(object : ValueEventListener {
+        ref.child(idProducto).addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                for (ds in snapshot.children) {
-                    val nota_desc = "${ds.child("notaDesc").value}"
-                    val precio_desc = "${ds.child("precioDesc").value}"
-                    if (nota_desc.isNotEmpty() && precio_desc.isNotEmpty()) {
-                        holder.item_nota_p.visibility = View.VISIBLE
-                        holder.item_precio_p_desc.visibility = View.VISIBLE
+                val nota_desc = "${snapshot.child("notaDesc").value}"
+                val precio_desc = "${snapshot.child("precioDesc").value}"
+                if (nota_desc.isNotEmpty() && precio_desc.isNotEmpty()) {
+                    holder.item_nota_p.visibility = View.VISIBLE
+                    holder.item_precio_p_desc.visibility = View.VISIBLE
 
-                        holder.item_nota_p.text = "${nota_desc}"
-                        holder.item_precio_p_desc.text = "${precio_desc}${" USD"}"
-                    }
+                    holder.item_nota_p.text = "${nota_desc}"
+                    holder.item_precio_p_desc.text = "${precio_desc}${" USD"}"
+                    holder.item_precio_p.paintFlags = holder.item_precio_p.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
                 }
             }
 
