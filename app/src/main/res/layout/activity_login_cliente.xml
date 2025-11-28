@@ -70,7 +70,7 @@
             android:textAllCaps="true"
             app:cornerRadius="8dp" />
 
-        <!--Login con Google
+        <!--Login con Google -->
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
             </com.google.android.material.card.MaterialCardView>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
--->
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "411077828785-fu65vdu8sn0abbca7hlkctdd2gcrea8j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.tiendavirtual",
+            "certificate_hash": "e7bc5559460fb5ab4cc25f67e32db18091415900"
+          }
+        },
+        {
           "client_id": "411077828785-o1344rpse3564buua4rem1866r0flb1h.apps.googleusercontent.com",
           "client_type": 3
         }
