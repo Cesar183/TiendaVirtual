@@ -87,6 +87,14 @@
     <string name="item_precio_p">00</string>
     <string name="item_precio_p_desc">00</string>
 
+    <!--Registro con numero telefonico-->
+    <string name="txtLoginTelC">Login con teléfono</string>
+    <string name="etTelefonoC">Teléfono</string>
+    <string name="btnEnviarCodigo">Enviar código</string>
+    <string name="etCodVer">Código</string>
+    <string name="btnVerificarCod">Verificar Código</string>
+    <string name="tvReenviarCod">¿No llegó el código?. <b>Reenviar</b></string>
+
     <string name="txt_bienvenida">Bienvenido(a)</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

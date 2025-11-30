@@ -19,6 +19,7 @@ lifecycleV = "2.9.4"
 playServicesLocationV = "21.3.0"
 storageV = "22.0.1"
 authGoogleV = "21.4.0"
+ccpV = "2.7.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -38,6 +39,7 @@ lifecycle = {group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", versi
 playServicesLocation = {group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocationV"}
 storage = {group = "com.google.firebase", name = "firebase-storage", version.ref = "storageV"}
 authGoogle = {group = "com.google.android.gms", name = "play-services-auth", version.ref = "authGoogleV"}
+ccp = {group = "com.hbb20", name = "ccp", version.ref = "ccpV"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

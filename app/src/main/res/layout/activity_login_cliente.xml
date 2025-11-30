@@ -74,9 +74,9 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="15dp"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="horizontal">
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="100dp"
@@ -84,10 +84,24 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/btnLoginGoogle"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_google_login"
                     android:layout_width="25dp"
-                    android:layout_height="30dp"/>
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_google_login" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnLoginTel"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_tel_login" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -106,12 +120,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            android:textColor="@color/celeste_oscuro"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/tvRegistrarC" />
+            android:text="@string/tvRegistrarC"
+            android:textColor="@color/celeste_oscuro"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
